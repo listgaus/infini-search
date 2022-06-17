@@ -1,0 +1,9 @@
+<mat-list role="list" class='users-list' *ngIf="users">
+    <app-user-card *ngFor='let user of users' [user]='user'></app-user-card>
+</mat-list>
+<mat-progress-spinner *ngIf="isLoading" class="loader" mode="indeterminate" [diameter]="40">
+</mat-progress-spinner>
+
+<div class="no-results" *ngIf="isNoResults">
+  No Results Found, try another term
+</div>

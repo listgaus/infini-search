@@ -1,0 +1,130 @@
+:host {
+  font-family: arial,sans-serif;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.spacer {
+  flex: 2;
+}
+.search-container {
+  flex: 1;
+  width: 44vw;
+  background: white;
+  height: 39px;
+  border-radius: 20px;
+  padding-left: 20px;
+  display: flex;
+  align-content: center;
+  margin-left: 2vw;
+  input{
+    width: 32vw;
+    border: none;
+    font-size: 20px;
+  }
+  textarea:focus, input:focus{
+    outline: none;
+  }
+  .search-btn {
+    border: none;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 39px;
+    max-height: 39px;
+    border-radius: 20px;
+    svg {
+      height: 20px;
+    }
+    svg:hover {
+      opacity: 50%;
+      cursor: pointer;
+    }
+  }
+}
+.search-container:hover {
+  box-shadow: 0 0 0 2px deepskyblue;
+}
+.actions-container {
+  display: flex;
+  .border {
+    border-left: 3px solid green;
+    border-radius: 5px;
+    margin: 5px 5px 5px 0px;
+  }
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: #19a1d291;
+  color: white;
+  font-weight: 600;
+
+  img {
+    margin: 0 16px;
+  }
+}
+
+.toolbar #git-logo {
+  color: white;
+  height: 39px;
+  margin: 0 16px;
+}
+.toolbar #git-logo:hover {
+  opacity: 0.2;
+}
+svg.material-icons {
+  height: 34px;
+  width: auto;
+  fill: white;
+  margin-right: 8px;
+}
+svg.material-icons:hover {
+  fill: blue;
+}
+
+@media only screen and (max-width: 641px ) {
+  :host{
+    font-size: 12px;
+  }
+  .toolbar{
+    font-weight: unset;
+    img {
+      margin: 0;
+      height: 30px;
+    }
+  }
+
+  .search-container{
+    height: 26px;
+    input{
+      width: 28vw;
+      border: none;
+      font-size: 10px;
+    }
+    .search-btn{
+      max-width: 20px;
+    }
+  }
+  svg.material-icons {
+    height: 38px;
+    width: 22px;
+  }
+  .actions-container {
+    .border {
+      border-left: 2px solid green;
+      margin: 3px 5px 3px 5px;
+    }
+  }
+}
+
+

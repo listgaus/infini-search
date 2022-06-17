@@ -1,0 +1,18 @@
+<mat-card role="listitem" class="card-item" *ngIf="user">
+  <div class="header">
+    <mat-card-title class="name-title">{{user.name}} - ({{user.username}})</mat-card-title>
+    <mat-card-subtitle class="email">{{user.email}} <span class="spacer">|</span>  <a href="{{user.website}}">{{user.website}}</a></mat-card-subtitle>
+  </div>
+  <div class="content">
+  <mat-card-content class="right">
+    <div class="row-one">{{user.company.name}}</div>
+    <div class="row-two">{{user.company.bs}},</div>
+    <div class="row-three">{{user.company.catchPhrase}}</div>
+  </mat-card-content>
+  <mat-card-content class="left">
+    <div class="row-one">{{user.address.street}},</div>
+    <div class="row-two">{{user.address.city}} , {{user.address.zipcode}}</div>
+    <div class="row-three">{{user.phone}}</div>
+  </mat-card-content>
+  </div>
+</mat-card>
