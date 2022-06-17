@@ -10,7 +10,7 @@ import {tap} from "rxjs/operators";
 })
 export class AppComponent {
   constructor(private api: ApiService) { }
-  title = 'infinity-search';
+  title = 'infini-search';
   isLoading = false;
   users: User[] = [];
 }
