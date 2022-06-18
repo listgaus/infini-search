@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../services/data/data.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-toolbar',
@@ -7,19 +8,22 @@ import {DataService} from "../../services/data/data.service";
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
+  searchForm: FormGroup | undefined;
   query: string = '';
-  constructor(private data:DataService) {}
+  constructor(private data:DataService, private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    this.searchForm = this.fb.group({
+      query: [null, [Validators.minLength(2), Validators.required]]
+    })
   }
 
-  searchTerm(){
-    this.data.searchUser(this.query);
+  searchFormQuery(){
+    this.data.searchUser(this.searchForm?.controls['query'].value);
   }
 
-  clearForm(){
+  clearFormQuery(){
     this.data.resetUsers();
-    this.query = '';
+    this.searchForm?.reset()
   }
-
 }

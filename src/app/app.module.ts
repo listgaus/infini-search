@@ -7,9 +7,12 @@ import { UserCardComponent } from './components/user-card/user-card.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import {MatCardModule} from "@angular/material/card";
     HttpClientModule,
     FormsModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

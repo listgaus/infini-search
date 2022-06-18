@@ -19,10 +19,21 @@
   display: flex;
   align-content: center;
   margin-left: 2vw;
-  input{
+  mat-form-field{
     width: 32vw;
     border: none;
-    font-size: 20px;
+    color: darkblue;
+    font-weight: 400;
+  }
+  mat-hint{
+    color: lightseagreen;
+  }
+  mat-error{
+    color: orangered;
+  }
+  .disabled{
+    color: red;
+    cursor: unset;
   }
   textarea:focus, input:focus{
     outline: none;
@@ -106,7 +117,7 @@ svg.material-icons:hover {
 
   .search-container{
     height: 26px;
-    input{
+    mat-form-field{
       width: 28vw;
       border: none;
       font-size: 10px;
