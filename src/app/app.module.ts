@@ -13,6 +13,7 @@ import {MatCardModule} from "@angular/material/card";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatInputModule} from "@angular/material/input";
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    FontAwesomeModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
