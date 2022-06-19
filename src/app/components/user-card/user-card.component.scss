@@ -50,13 +50,13 @@
     color: #760088
   }
   .left{
-    width: 50%;
+    width: 48%;
     float: left;
   }
   .right{
-    width: 50%;
+    width: 48%;
     float: right;
-    margin-left: 1px solid;
+    margin-left: 1px;
   }
 
 }
@@ -81,40 +81,35 @@ mat-card-footer{
   color: #603814
 }
 
-@media only screen and (max-width: 745px ) {
-  .card-item {
-    margin: 0.2rem;
-    font-weight: 200;
-    height: 22vh;
-    width: 98vw;
-    font-size: 10px;
-  }
+@media only screen and (min-width: 642px) and (max-width: 1007px) {
+.card-item {
+  margin: 0.2rem;
+  font-weight: 200;
+  height: 22vh;
+  width: 40vw;
+}
   mat-card-title{
-    font-size: 12px;
+    font-weight: bold;
   }
+}
+@media only screen and (max-width: 641px ) {
+  .card-item {
+    width: 90vw;
+  }
+
   .name-title {
     margin-right: 0;
   }
-  .email {
-    font-size: 10px;
-    .spacer, a {
-      color: #FDAFC7;
-      margin: 0px 5px 0px 5px;
-    }
-
-  }
   .content {
-    font-size: 10px;
     margin-left: 0;
     .right{
-      margin-left: 1px solid;
+      margin-left: 1px;
     }
 
   }
 
   .info{
     font-weight: unset;
-    font-size: 10px;
     .desc{
       font-size: small;
     }
@@ -131,4 +126,8 @@ mat-card-footer{
     justify-content: center;
     color: #603814
   }
+}
+
+@media only screen and (max-width: 420px ) {
+
 }
