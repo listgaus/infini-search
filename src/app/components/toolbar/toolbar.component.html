@@ -10,13 +10,13 @@
       <input matInput formControlName="query" (keydown.enter)="$event.preventDefault()" placeholder="Start Searching a user">
     </mat-form-field>
     <mat-error *ngIf="searchForm.touched && searchForm.invalid">
-        Minimum length is two letters
+        2 letters required
     </mat-error>
     <a class="border"></a>
     <button class="search-btn" (click)="clearFormQuery()">
       <i class="fas fa-xmark"></i>
     </button>
-    <button class="search-btn" (click)="searchFormQuery()" [disabled]="null">
+    <button class="search-btn" (click)="searchFormQuery()">
       <i class="fas fa-magnifying-glass"></i>
     </button>
   </form>

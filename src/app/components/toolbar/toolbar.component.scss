@@ -102,6 +102,11 @@ svg.material-icons {
 svg.material-icons:hover {
   fill: blue;
 }
+@media only screen and (max-width: 760px ) {
+  .search-container{
+    width: 58vw;
+  }
+}
 
 @media only screen and (max-width: 641px ) {
   :host{
@@ -120,7 +125,7 @@ svg.material-icons:hover {
     mat-form-field{
       width: 28vw;
       border: none;
-      font-size: 10px;
+      font-size: 11px;
     }
     .search-btn{
       max-width: 20px;

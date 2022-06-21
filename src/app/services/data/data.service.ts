@@ -25,8 +25,11 @@ export class DataService {
     this.users$.next([]);
     this.api.getUsers().pipe(
       map( users => users.filter( user => this.validateQuery(user,query))),
-      tap(users => users.length === 0 ? this.isNoResults$.next(true) : null ),
-      tap((users: User[]) => {this.users$.next(users), this.loading$.next(false)}),
+      tap((users: User[]) => {
+        users.length === 0 ? this.isNoResults$.next(true) : null,
+        this.users$.next(users),
+        this.loading$.next(false)
+      })
     ).subscribe();
   }
 
